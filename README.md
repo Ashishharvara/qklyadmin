@@ -1,174 +1,406 @@
-# Qkly - Service Provider Marketplace App
+# Qkly Admin App 🚀
 
-A React Native mobile application for connecting users with local service providers. The app supports multiple service categories including AC repair, cleaning, electrician, plumbing, carpentry, tailoring, laundry, and mobile repair services.
+Qkly Admin ek powerful React Native mobile application hai jo admin panel ke liye banaya gaya hai. Is app mein aap users, services, reports, aur payments ko manage kar sakte hain.
 
-![React Native](https://img.shields.io/badge/React%20Native-0.80.2-61DAFB?style=flat-square&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
-![Firebase](https://img.shields.io/badge/Firebase-23.5.0-FFCA28?style=flat-square&logo=firebase)
-![React Navigation](https://img.shields.io/badge/React%20Navigation-v7-61DAFB?style=flat-square&logo=react)
+![React Native](https://img.shields.io/badge/React%20Native-0.83.1-blue?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue?style=for-the-badge&logo=typescript)
+![Navigation](https://img.shields.io/badge/React%20Navigation-7.9.1-green?style=for-the-badge)
+
+---
 
 ## 📱 App Features
 
 ### 🔐 Authentication
-- Email/Password authentication via Firebase Auth
-- Google Sign-In integration
-- Facebook Sign-In integration
-- Secure user session management
+- Secure login system
+- Demo credentials: `admin@qkly.com` / `admin123`
+- Session management
+- Logout functionality
 
-### 🛠️ Services
-- Multiple service categories:
-  - AC Repair
-  - Cleaning
-  - Electrician
-  - Plumbing
-  - Carpentry
-  - Tailoring
-  - Laundry
-  - Mobile Repair
-- Service listing with images
-- Search and filter functionality
-- Favorite services (wishlist)
+### 📊 Dashboard
+- **Key Metrics Display**
+  - Total Users
+  - Active Services
+  - Revenue tracking
+  - Reports overview
+- **User Analytics**
+  - Daily Active Users (DAU)
+  - Monthly Active Users (MAU)
+  - New users today
+- **Conversion Funnel**
+  - Viewed → Contacted
+  - Contacted → Requested
+  - Requested → Accepted
+  - Accepted → Reviewed
+- **Revenue Breakdown**
+  - Today's revenue
+  - Renewal rate
+- **Trust & Safety**
+  - Complaints per service
+  - Average resolution time
+  - Services removed
+- **Quick Actions**
+  - Users management
+  - Services management
+  - Reports management
+  - Payments access
 
-### 📅 Booking System
-- Service booking with time slots
-- Booking confirmation modals
-- Booking history tracking
-- Real-time status updates
+### 👥 User Management
+- User list view
+- Search users by name, email, phone
+- Filter by status (active, blocked, all)
+- Sort by newest, oldest, most services, most reports
+- View user details
+- Block/unblock users
+- Delete users
 
-### 📍 Location Services
-- Geolocation integration
-- Google Places autocomplete
-- Map integration
-- Distance calculation
+### 🛠️ Service Management
+- Service list with details
+- Search by title, description, provider
+- Filter by status and category
+- Sort by newest, oldest, most views, most contacts
+- Hide/remove services
+- Mark as suspicious
+- View service analytics
 
-### 🔔 Notifications
-- In-app notifications
-- Push notification support
-- Notification filtering
-- Toast messages
+### ⚠️ Reports Management
+- Reports list with priority indicators
+- Filter by type, status, priority
+- Search by reporter/reported name
+- Sort by priority or date
+- Actions:
+  - Ignore report
+  - Warn user
+  - Block user
+  - Remove service
 
-### 💳 Payment
-- UPI payment integration
-- Google Pay integration
-- Secure payment processing
+### 💳 Payments Management
+- Payment transactions list
+- Filter by status, method, plan type
+- Search by user name, email, transaction ID
+- View payment details
+- Refund payments
 
-## 🏗️ Tech Stack
-
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| React Native | 0.80.2 | Mobile Framework |
-| TypeScript | 5.x | Programming Language |
-| React Navigation | v7 | Navigation |
-| Firebase App | 23.5.0 | Backend Services |
-| Firebase Auth | 23.5.0 | Authentication |
-| Firebase Firestore | 23.5.0 | Database |
-| React Context API | - | State Management |
-
-## 📁 Project Structure
-
-```
-qkly/
-├── src/
-│   ├── components/       # Reusable UI components
-│   │   ├── Ac.tsx
-│   │   ├── Carpenter.tsx
-│   │   ├── Cleaning.tsx
-│   │   ├── Electrician.tsx
-│   │   ├── Header.tsx
-│   │   ├── Laundry.tsx
-│   │   ├── Mobile.tsx
-│   │   ├── Painter.tsx
-│   │   ├── Plumbing.tsx
-│   │   ├── Services.tsx
-│   │   ├── Tailor.tsx
-│   │   ├── Tiffin.tsx
-│   │   └── common/
-│   │       ├── AuthGuard.tsx
-│   │       ├── BookingConfirmationModal.tsx
-│   │       ├── HeaderWithBack.tsx
-│   │       ├── ImagePickerSection.tsx
-│   │       ├── SearchBar.tsx
-│   │       └── TimeSlotSelectionModal.tsx
-│   ├── config/          # Configuration files
-│   │   ├── apiKeys.ts
-│   │   └── firebase.ts
-│   ├── context/         # React Context providers
-│   │   ├── AuthContext.tsx
-│   │   ├── FavoritesContext.tsx
-│   │   ├── SearchFocusContext.tsx
-│   │   └── ThemeContext.tsx
-│   ├── navigation/      # Navigation configuration
-│   │   └── RootNavigator.tsx
-│   ├── screens/         # App screens
-│   │   ├── Auth/
-│   │   ├── CHAT/
-│   │   ├── CustomerReviews.tsx
-│   │   ├── HomeScreen.tsx
-│   │   ├── LikedServices.tsx
-│   │   ├── LocationScreen.tsx
-│   │   ├── NotificationCenter.tsx
-│   │   ├── NotificationScreen.tsx
-│   │   ├── PROVIDER/
-│   │   ├── Screens.ts
-│   │   ├── SellScreen.tsx
-│   │   ├── SERVICES/
-│   │   ├── navigation/
-│   │   └── PROFILE/
-│   ├── services/        # Business logic services
-│   │   ├── bookingService.ts
-│   │   ├── GooglePayService.ts
-│   │   ├── NotificationService.ts
-│   │   └── UPIPaymentService.ts
-│   ├── types/           # TypeScript definitions
-│   │   ├── navigation.d.ts
-│   │   └── navigation.ts
-│   └── utils/           # Utility functions
-│       ├── authUtils.ts
-│       └── responsive.ts
-├── resources/
-│   ├── colors/          # Color definitions
-│   │   └── Color.js
-│   ├── data/            # Static data
-│   │   └── SellScreen.json
-│   ├── fonts/           # Custom fonts (Poppins)
-│   └── styles/          # Shared styles
-├── android/             # Android native code
-├── ios/                 # iOS native code
-├── package.json
-└── README.md
-```
-## 📱 App Screens
-
-| Screen | Description |
-|--------|-------------|
-| Home Screen | Main landing with service categories |
-| Services Screen | Browse all services with filters |
-| Liked Services | View saved/favorite services |
-| Profile Screen | User profile and settings |
-| Notification Center | View and manage notifications |
-| Sell Screen | Post new services |
-| Auth Screens | Login and registration |
-
-## 🎯 Key Achievements
-
-- ✅ Developed cross-platform mobile app for iOS and Android
-- ✅ Implemented multi-factor authentication (Email, Google, Facebook)
-- ✅ Built comprehensive service marketplace with 8+ categories
-- ✅ Created end-to-end booking system with time slots
-- ✅ Integrated Google Maps and location services
-- ✅ Implemented UPI and Google Pay payment processing
-- ✅ Designed notification system with real-time updates
-- ✅ Used React Context API for state management
-- ✅ Configured Firebase for both iOS and Android
-
-## 👨‍💻 Developer Info
-
-**Developer:** Ashish Harvara
-
-**Project Type:** compney Project
-
-**Duration:** [Nov 2025] - Present
-
-**Contact:** [ashishharvara111@gmail.com]
+### 🎨 Theme Support
+- Dark mode (default)
+- Light mode support
+- Custom color palette
+- Status colors
+- Priority colors
 
 ---
+
+## 🏗️ Project Structure
+
+```
+qklyadmin/
+├── src/
+│   ├── assets/
+│   │   ├── icons/
+│   │   └── images/
+│   ├── components/
+│   │   ├── analytics/
+│   │   ├── common/
+│   │   │   ├── Avatar.tsx
+│   │   │   ├── Badge.tsx
+│   │   │   ├── Button.tsx
+│   │   │   ├── Card.tsx
+│   │   │   ├── EmptyState.tsx
+│   │   │   ├── Header.tsx
+│   │   │   ├── Input.tsx
+│   │   │   ├── Spinner.tsx
+│   │   │   └── index.ts
+│   │   └── layout/
+│   ├── context/
+│   │   ├── AnalyticsContext.tsx
+│   │   ├── AuthContext.tsx
+│   │   ├── PaymentContext.tsx
+│   │   ├── ReportContext.tsx
+│   │   ├── ServiceContext.tsx
+│   │   ├── ThemeContext.tsx
+│   │   ├── UserContext.tsx
+│   │   └── index.ts
+│   ├── navigation/
+│   │   ├── AppNavigator.tsx
+│   │   ├── BottomTabBar.tsx
+│   │   ├── Stacks.tsx
+│   │   └── index.ts
+│   ├── screens/
+│   │   ├── auth/
+│   │   │   ├── LoginScreen.tsx
+│   │   │   └── index.ts
+│   │   ├── dashboard/
+│   │   │   ├── DashboardHome.tsx
+│   │   │   └── index.ts
+│   │   ├── payments/
+│   │   │   ├── PaymentDetailScreen.tsx
+│   │   │   ├── PaymentsListScreen.tsx
+│   │   │   └── index.ts
+│   │   ├── reports/
+│   │   │   ├── ReportDetailScreen.tsx
+│   │   │   ├── ReportsListScreen.tsx
+│   │   │   └── index.ts
+│   │   ├── services/
+│   │   │   ├── ServiceDetailScreen.tsx
+│   │   │   ├── ServiceListScreen.tsx
+│   │   │   └── index.ts
+│   │   ├── settings/
+│   │   ├── users/
+│   │   │   ├── UserDetailScreen.tsx
+│   │   │   ├── UserListScreen.tsx
+│   │   │   └── index.ts
+│   │   └── index.ts
+│   ├── services/
+│   │   ├── api.ts
+│   │   ├── index.ts
+│   │   └── mockData.ts
+│   ├── theme/
+│   │   ├── colors.ts
+│   │   ├── index.ts
+│   │   └── typography.ts
+│   ├── types/
+│   │   ├── analytics.ts
+│   │   ├── index.ts
+│   │   ├── payment.ts
+│   │   ├── react-native-vector-icons.d.ts
+│   │   ├── report.ts
+│   │   ├── service.ts
+│   │   └── user.ts
+│   ├── utils/
+│   │   ├── constants.ts
+│   │   ├── formatters.ts
+│   │   ├── helpers.ts
+│   │   ├── index.ts
+│   │   └── validators.ts
+│   └── App.tsx
+├── android/
+├── ios/
+├── .eslintrc.js
+├── .gitignore
+├── .prettierrc.js
+├── App.tsx
+├── babel.config.js
+├── index.js
+├── jest.config.js
+├── metro.config.js
+├── package.json
+└── tsconfig.json
+```
+
+---
+
+## 🛠️ Installation Steps
+
+### Prerequisites
+- Node.js >= 20
+- React Native development environment
+- Android Studio (for Android)
+- Xcode (for iOS)
+
+### Step 1: Clone Repository
+```bash
+git clone <repository-url>
+cd qklyadmin
+```
+
+### Step 2: Install Dependencies
+```bash
+# Using npm
+npm install
+
+# OR using Yarn
+yarn install
+```
+
+### Step 3: iOS Setup (macOS only)
+```bash
+# Install CocoaPods
+bundle install
+
+# Install pods
+bundle exec pod install
+```
+
+### Step 4: Start Metro
+```bash
+# Using npm
+npm start
+
+# OR using Yarn
+yarn start
+```
+
+### Step 5: Run on Device/Simulator
+
+#### Android
+```bash
+# Using npm
+npm run android
+
+# OR using Yarn
+yarn android
+```
+
+#### iOS
+```bash
+# Using npm
+npm run ios
+
+# OR using Yarn
+yarn ios
+```
+
+---
+
+## 📦 Dependencies
+
+### Core
+- **react**: ^19.2.0
+- **react-native**: ^0.83.1
+
+### Navigation
+- **@react-navigation/native**: ^7.1.27
+- **@react-navigation/native-stack**: ^7.9.1
+- **@react-navigation/bottom-tabs**: ^7.9.1
+
+### UI Components
+- **react-native-paper**: ^5.14.5
+- **react-native-safe-area-context**: ^5.6.2
+- **react-native-screens**: ^4.18.0
+- **react-native-vector-icons**: ^10.3.0
+
+### Charts & Analytics
+- **react-native-chart-kit**: ^6.12.0
+
+### Utilities
+- **date-fns**: ^4.1.0
+- **uuid**: ^13.0.0
+
+---
+
+## 🔧 Development Commands
+
+```bash
+# Start Metro server
+npm start
+
+# Run on Android
+npm run android
+
+# Run on iOS
+npm run ios
+
+# Run linting
+npm run lint
+
+# Run tests
+npm test
+
+# Start TypeScript compiler in watch mode
+npm run start -- --reset-cache
+```
+
+---
+
+## 🎨 Theme Colors
+
+### Dark Mode (Default)
+| Color | Value |
+|-------|-------|
+| Primary | `#60A5FA` |
+| Secondary | `#A78BFA` |
+| Success | `#34D399` |
+| Warning | `#FBBF24` |
+| Error | `#F87171` |
+| Background | `#0F172A` |
+| Surface | `#1E293B` |
+
+### Light Mode
+| Color | Value |
+|-------|-------|
+| Primary | `#2563EB` |
+| Secondary | `#7C3AED` |
+| Success | `#10B981` |
+| Warning | `#F59E0B` |
+| Error | `#EF4444` |
+| Background | `#0F172A` |
+| Surface | `#FFFFFF` |
+
+---
+
+## 📱 Screens Overview
+
+| Screen | Route | Description |
+|--------|-------|-------------|
+| Login | Login | Admin login screen |
+| Dashboard | Main → Dashboard | Main dashboard with analytics |
+| Users List | Main → Users → UserList | User management list |
+| User Detail | Main → Users → UserDetail | User details view |
+| Services List | Main → Services → ServiceList | Service management list |
+| Service Detail | Main → Services → ServiceDetail | Service details view |
+| Reports List | Main → Reports → ReportsList | Reports management list |
+| Report Detail | Main → Reports → ReportDetail | Report details view |
+| Payments List | Main → Payments → PaymentsList | Payment transactions list |
+| Payment Detail | Main → Payments → PaymentDetail | Payment details view |
+
+---
+
+## 🔐 API Authentication
+
+The app uses JWT-based authentication with mock data.
+
+**Demo Credentials:**
+- Email: `admin@qkly.com`
+- Password: `admin123`
+
+**Mock Token:** `mock-jwt-token`
+
+---
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm test -- --watch
+
+# Run tests with coverage
+npm test -- --coverage
+```
+
+---
+
+## 📄 License
+
+This project is private and proprietary.
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📞 Support
+
+For support, please contact the development team.
+
+---
+
+## 🙏 Acknowledgments
+
+- [React Native](https://reactnative.dev)
+- [React Navigation](https://reactnavigation.org)
+- [React Native Paper](https://callstack.github.io/react-native-paper/)
+- [React Native Chart Kit](https://github.com/indragunawan/react-native-chart-kit)
+
+---
+
+**Made with ❤️ by Qkly Team**
+
