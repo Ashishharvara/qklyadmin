@@ -273,34 +273,22 @@ The app uses JWT-based authentication with mock data.
 
 ## 📄 License
 
-This project is private and proprietary.
-
----
+This project is proprietary software. All rights reserved.
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+This is an academic/student project. For inquiries:
+- **Developer**: [Your Name]
+- **Email**: [Your Email]
+- **Institution**: [Your Institution]
+
+## 📌 Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0.0 | Current | Initial release with core features |
 
 ---
 
-## 📞 Support
-
-For support, please contact the development team.
-
----
-
-## 🙏 Acknowledgments
-
-- [React Native](https://reactnative.dev)
-- [React Navigation](https://reactnavigation.org)
-- [React Native Paper](https://callstack.github.io/react-native-paper/)
-- [React Native Chart Kit](https://github.com/indragunawan/react-native-chart-kit)
-
----
-
-**Made with ❤️ by Qkly Team**
+**Built with ❤️ using React Native**
 
