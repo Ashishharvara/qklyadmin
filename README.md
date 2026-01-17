@@ -12,7 +12,7 @@ Qkly Admin ek powerful React Native mobile application hai jo admin panel ke liy
 
 ### 🔐 Authentication
 - Secure login system
-- Demo credentials: `admin@qkly.com` / `admin123`
+- Demo credentials
 - Session management
 - Logout functionality
 
@@ -187,70 +187,6 @@ qklyadmin/
 ```
 
 ---
-
-## 🛠️ Installation Steps
-
-### Prerequisites
-- Node.js >= 20
-- React Native development environment
-- Android Studio (for Android)
-- Xcode (for iOS)
-
-### Step 1: Clone Repository
-```bash
-git clone <repository-url>
-cd qklyadmin
-```
-
-### Step 2: Install Dependencies
-```bash
-# Using npm
-npm install
-
-# OR using Yarn
-yarn install
-```
-
-### Step 3: iOS Setup (macOS only)
-```bash
-# Install CocoaPods
-bundle install
-
-# Install pods
-bundle exec pod install
-```
-
-### Step 4: Start Metro
-```bash
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-### Step 5: Run on Device/Simulator
-
-#### Android
-```bash
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-#### iOS
-```bash
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
----
-
 ## 📦 Dependencies
 
 ### Core
@@ -277,29 +213,6 @@ yarn ios
 
 ---
 
-## 🔧 Development Commands
-
-```bash
-# Start Metro server
-npm start
-
-# Run on Android
-npm run android
-
-# Run on iOS
-npm run ios
-
-# Run linting
-npm run lint
-
-# Run tests
-npm test
-
-# Start TypeScript compiler in watch mode
-npm run start -- --reset-cache
-```
-
----
 
 ## 🎨 Theme Colors
 
@@ -356,20 +269,7 @@ The app uses JWT-based authentication with mock data.
 
 ---
 
-## 🧪 Testing
 
-```bash
-# Run all tests
-npm test
-
-# Run tests in watch mode
-npm test -- --watch
-
-# Run tests with coverage
-npm test -- --coverage
-```
-
----
 
 ## 📄 License
 
