@@ -278,9 +278,9 @@ This project is proprietary software. All rights reserved.
 ## 🤝 Contributing
 
 This is an academic/student project. For inquiries:
-- **Developer**: [Your Name]
-- **Email**: [Your Email]
-- **Institution**: [Your Institution]
+- **Developer**: [Ashish Harvara]
+- **Email**: [ashishharvara111@gmail.com]
+
 
 ## 📌 Version History
 
