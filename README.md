@@ -137,68 +137,6 @@ qkly/
 ├── package.json
 └── README.md
 ```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js >= 18
-- npm or yarn
-- iOS: Xcode, CocoaPods
-- Android: Android Studio, JDK 17
-
-### Installation
-
-```bash
-# Install dependencies
-npm install
-# or
-yarn install
-
-# For iOS
-bundle install
-bundle exec pod install
-
-# For Android
-# Ensure Android SDK is configured
-```
-
-### Running the App
-
-```bash
-# Start Metro
-npm start
-# or
-yarn start
-
-# Run on iOS
-npm run ios
-# or
-yarn ios
-
-# Run on Android
-npm run android
-# or
-yarn android
-```
-
-## 🛠️ Key Dependencies
-
-### Core
-- `react`: 19.1.0
-- `react-native`: 0.80.2
-- `@react-navigation/native`: 7.1.17
-- `@react-navigation/bottom-tabs`: 7.4.5
-- `@react-navigation/native-stack`: 7.2.0
-- `@react-native-firebase/app`: 23.5.0
-- `@react-native-firebase/auth`: 23.5.0
-- `@react-native-firebase/firestore`: 23.5.0
-
-### UI Components
-- `react-native-vector-icons`: 10.3.0
-- `react-native-image-picker`: 8.2.1
-- `react-native-image-crop-picker`: 0.51.1
-- `react-native-maps`: 1.26.6
-
 ## 📱 App Screens
 
 | Screen | Description |
@@ -225,12 +163,12 @@ yarn android
 
 ## 👨‍💻 Developer Info
 
-**Developer:** [Your Name]
+**Developer:** Ashish Harvara
 
-**Project Type:** Personal Project / Portfolio Project
+**Project Type:** compney Project
 
-**Duration:** [Start Date] - Present
+**Duration:** [Nov 2025] - Present
 
-**Contact:** [Your Email]
+**Contact:** [ashishharvara111@gmail.com]
 
 ---
